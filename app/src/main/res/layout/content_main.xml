@@ -9,7 +9,7 @@
     tools:showIn="@layout/app_bar_main">
 
     <include
-        layout="@layout/fragment_register"
+        layout="@layout/fragment_create_todo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
