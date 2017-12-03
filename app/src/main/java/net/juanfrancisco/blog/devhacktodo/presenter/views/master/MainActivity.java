@@ -1,8 +1,9 @@
-package net.juanfrancisco.blog.devhacktodo;
+package net.juanfrancisco.blog.devhacktodo.presenter.views.master;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import net.juanfrancisco.blog.devhacktodo.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,13 +37,26 @@ public class MainActivity extends AppCompatActivity
         });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+//        // Begin the transaction http://mundogeek.net/archivos/2013/05/02/desarrollo-rapido-en-android-con-anotaciones/
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//// Replace the contents of the container with the new fragment
+//        ft.replace(R.id.your_placeholder, new OldLoginFragment());
+//// or ft.add(R.id.your_placeholder, new FooFragment());
+//// Complete the changes added above
+//        ft.commit();
+
+
+
+
     }
 
     @Override
